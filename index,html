@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Happy Birthday Isma 🍂</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fde9cf; --bg2:#f9d3a8; --ink:#4a2a1c; --soft:#7a4a33;
+  --maple:#c2452d; --pumpkin:#e07a2f; --mustard:#eeb243; --plum:#7b3f5c;
+  --paper:#fff8ec; --shell:#e8895a; --shell2:#c2452d; --screen:#fff3dc;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#2b1710; --bg2:#3b2016; --ink:#fbe6c8; --soft:#e7bf98;
+    --paper:#4a2a1d; --screen:#5a3322; --shell:#c9683f; --shell2:#9c3321;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#2b1710; --bg2:#3b2016; --ink:#fbe6c8; --soft:#e7bf98;
+  --paper:#4a2a1d; --screen:#5a3322; --shell:#c9683f; --shell2:#9c3321; color-scheme:dark;
+}
+html{height:auto;scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Calibri,Carlito,"Segoe UI",sans-serif;font-size:18px;line-height:1.55;overflow-x:hidden;
+  background-image:radial-gradient(circle at 15% 10%,var(--bg2) 0,transparent 40%),radial-gradient(circle at 90% 60%,var(--bg2) 0,transparent 45%)}
+h1,h2,.cal{font-family:Calibri,Carlito,sans-serif;font-weight:700;font-style:italic}
+section{padding:72px 20px;max-width:880px;margin:0 auto;text-align:center;position:relative}
+h2{font-size:clamp(30px,6vw,46px);margin:0 0 8px;color:var(--maple)}
+.sub{font-style:italic;color:var(--soft);margin:0 0 32px}
+
+/* falling leaves */
+#leaves{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:5}
+.leaf{position:absolute;top:-8vh;font-size:22px;opacity:.85;animation:fall linear infinite}
+@keyframes fall{to{transform:translate(var(--dx),112vh) rotate(var(--rot))}}
+
+/* hero */
+.hero{min-height:92vh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding-top:40px}
+.hero .small{max-width:560px;font-size:18px;font-style:italic;color:var(--soft);margin:0 0 12px;line-height:1.5}
+h1{font-size:clamp(54px,15vw,116px);line-height:.95;margin:0;color:var(--maple);text-shadow:3px 3px 0 var(--mustard);letter-spacing:-1px}
+h1 span{display:block;color:var(--plum);text-shadow:3px 3px 0 var(--bg2);font-size:.7em;margin-top:6px}
+.heroline{margin-top:22px;font-style:italic;font-weight:700;font-size:20px;color:var(--pumpkin)}
+.hint{margin-top:34px;font-style:italic;color:var(--soft);animation:bob 2s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(8px)}}
+
+/* console */
+.console{width:min(340px,92vw);margin:0 auto;background:linear-gradient(160deg,var(--shell),var(--shell2));border-radius:34px 34px 60px 60px;padding:22px 20px 30px;box-shadow:0 14px 0 #8e2f1d,0 28px 40px rgba(60,20,10,.35);position:relative}
+.console .brand{font-style:italic;font-weight:700;color:#fff3dc;font-size:15px;letter-spacing:.5px;margin-bottom:10px}
+.screenwrap{background:#3a1f14;border-radius:18px 18px 40px 18px;padding:16px}
+.screen{background:var(--screen);border-radius:8px;aspect-ratio:1/1;position:relative;overflow:hidden;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 18px rgba(0,0,0,.25)}
+.screen img,.screen video{width:100%;height:100%;object-fit:cover;display:block}
+.mute-btn{position:absolute;top:8px;right:8px;background:rgba(74,42,28,.8);color:#fff3dc;border:0;border-radius:999px;padding:4px 10px;font-size:13px;font-weight:700;cursor:pointer;z-index:2}
+.ph{padding:18px;color:var(--soft);font-style:italic}
+.ph b{display:block;font-size:34px;font-style:normal}
+.controls{display:flex;justify-content:space-between;align-items:center;margin-top:22px;padding:0 6px}
+.dpad{position:relative;width:96px;height:96px}
+.dpad button{position:absolute;width:34px;height:34px;border:0;background:#4a2a1c;color:#fde9cf;border-radius:8px;font-size:15px;cursor:pointer}
+.dpad .l{left:0;top:31px;border-radius:12px 4px 4px 12px}.dpad .r{right:0;top:31px;border-radius:4px 12px 12px 4px}
+.dpad .u{left:31px;top:0}.dpad .d{left:31px;bottom:0}.dpad .c{left:31px;top:31px;border-radius:0}
+.abtns{display:flex;gap:12px;transform:rotate(-18deg)}
+.abtns button{width:52px;height:52px;border-radius:50%;border:0;font-size:22px;cursor:pointer;box-shadow:0 4px 0 rgba(0,0,0,.3)}
+.abtns .a{background:var(--mustard)}.abtns .b{background:#fff3dc;margin-top:18px}
+.abtns button:active,.dpad button:active{transform:translateY(3px)}
+.dots{display:flex;gap:8px;justify-content:center;margin-top:18px}
+.dots i{width:9px;height:9px;border-radius:50%;background:rgba(255,243,220,.4)}.dots i.on{background:#fff3dc}
+
+/* polaroids */
+.wall{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:22px;margin-top:56px}
+.pol{background:var(--paper);padding:10px 10px 12px;border-radius:4px;box-shadow:0 8px 18px rgba(60,20,10,.25);transform:rotate(var(--r));cursor:pointer;transition:transform .25s;border:0;font:inherit;color:inherit;text-align:center}
+.pol:hover,.pol:focus-visible{transform:rotate(0) scale(1.05)}
+.pol .im{aspect-ratio:1/1;background:var(--bg2);border-radius:2px;overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:30px;position:relative}
+.pol img,.pol video{width:100%;height:100%;object-fit:cover;display:block}
+.pol .badge{position:absolute;bottom:6px;right:6px;background:rgba(74,42,28,.8);color:#fff3dc;border-radius:999px;padding:2px 7px;font-size:11px;font-weight:700}
+.note{font-size:15px;color:var(--soft);font-style:italic;margin-top:26px}
+
+/* letter */
+.env{width:min(380px,92vw);margin:0 auto;cursor:pointer;position:relative}
+.flap{background:linear-gradient(160deg,var(--mustard),var(--pumpkin));border-radius:16px;padding:34px 20px;box-shadow:0 10px 24px rgba(60,20,10,.3);font-size:26px;font-weight:700;font-style:italic;color:#4a2a1c;transition:transform .2s}
+.flap:hover{transform:translateY(-3px)}
+.flap small{display:block;font-size:16px;font-weight:400;margin-top:4px}
+.letter{max-height:0;overflow:hidden;transition:max-height 1.1s ease;margin-top:0}
+.letter.open{max-height:2800px;margin-top:-10px}
+.paper{background:var(--paper);margin:0 8px;padding:32px 24px 28px;border-radius:6px 6px 22px 22px;box-shadow:0 10px 24px rgba(60,20,10,.22);text-align:left;
+  background-image:repeating-linear-gradient(transparent 0 61px,rgba(194,69,45,.12) 61px 62px);border-top:6px solid var(--maple)}
+.msg{font-family:Calibri,Carlito,"Segoe UI",sans-serif;line-height:1.7;font-size:18px;margin:0 0 14px;color:var(--ink)}
+.urdu-line{font-family:"Noto Nastaliq Urdu","Jameel Noori Nastaleeq","Nafees Nastaleeq",serif;direction:rtl;text-align:center;line-height:2.35;font-size:20px;margin:14px 0;color:var(--maple);font-weight:700}
+.msg.end{text-align:center;font-size:20px;color:var(--plum);font-weight:700;font-style:italic;margin-top:18px}
+
+/* cake */
+.cake{font-size:96px;line-height:1;margin:10px 0}
+.flame{display:inline-block;animation:flick .5s ease-in-out infinite alternate}
+.flame.out{animation:none;opacity:.15;filter:grayscale(1)}
+@keyframes flick{to{transform:scale(1.15) rotate(6deg)}}
+.btn{background:var(--maple);color:#fff3dc;border:0;border-radius:999px;padding:14px 30px;font:inherit;font-weight:700;font-style:italic;font-size:20px;cursor:pointer;box-shadow:0 5px 0 #8e2f1d}
+.btn:active{transform:translateY(4px);box-shadow:0 1px 0 #8e2f1d}
+.wish{min-height:34px;margin-top:18px;font-weight:700;font-style:italic;color:var(--plum);font-size:22px}
+footer{text-align:center;padding:36px 20px 70px;color:var(--soft);font-style:italic}
+:focus-visible{outline:3px solid var(--plum);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){.leaf,.flame,.hint{animation:none}.letter{transition:none}}
+</style>
+</head>
+<body>
+<div id="leaves" aria-hidden="true"></div>
+
+<section class="hero">
+  <p class="small">don't know ab tk ki birthdays tmhri Ksi guzri hon, but hope sa yhn sa agy any wla ak ak din tmhry lia ak new khushkhbri ki khbr sth ho ✨</p>
+  <h1>Happy<br>Birthday<span id="name">Isma</span></h1>
+  <div class="heroline">🍂 Har wo insaan anmol hai jo aapko murjhane na de 🍁</div>
+  <div class="hint">neeche scroll karo ↓</div>
+</section>
+
+<section id="memories">
+  <h2>Humari yaadon ka console</h2>
+  <p class="sub">Buttons se video clips ghumao, ya polaroids pe tap karke dekho</p>
+  <div class="console">
+    <div class="brand">Memory Boy ♡ autumn edition</div>
+    <div class="screenwrap">
+      <div class="screen" id="screen" role="button" tabindex="0" aria-label="Agli yaad dekho"></div>
+    </div>
+    <div class="controls">
+      <div class="dpad">
+        <button class="u" aria-label="Pehli clip">▲</button>
+        <button class="l" aria-label="Pichli clip">◀</button>
+        <button class="c" aria-hidden="true" tabindex="-1"></button>
+        <button class="r" aria-label="Agli clip">▶</button>
+        <button class="d" aria-label="Aakhri clip">▼</button>
+      </div>
+      <div class="abtns">
+        <button class="b" id="shuffle" aria-label="Random clip">🎲</button>
+        <button class="a" id="heart" aria-label="Dil">🧡</button>
+      </div>
+    </div>
+    <div class="dots" id="dots"></div>
+  </div>
+
+  <div class="wall" id="wall"></div>
+  <p class="note">🎬 Kisi bhi polaroid pe tap karke usay upar console screen pe play karo</p>
+</section>
+
+<section id="letter">
+  <h2>Ek chhota sa khat</h2>
+  <p class="sub">Lifafa kholne ke liye tap karo</p>
+  <div class="env" id="env" role="button" tabindex="0" aria-expanded="false" aria-controls="lt">
+    <div class="flap">💌 Tumhare liye<small>tap to open</small></div>
+  </div>
+  <div class="letter" id="lt">
+    <div class="paper">
+      <p class="msg">Kuch rishty bht unexpected hoti hn jsy hum n kbi Socha b ni tha k hum miln gy but hmra milna kismet m likkha hoa tha na or jb Kisi sth bond bnna ho to na age matter krti h na jga or na time Kuch b ni..</p>
+      <p class="msg">hm n bht pyri pyri ydy bnai h Jin ki choti si jhlk ma n yhn Dali h tm automn ma born hoi na is lia m n kha is ki theme b wohi rkhi h m n abi tk suna hi tha k scorpions or Leo's logo p mushkil sa trust krty h but ak br un k bond bn jy to un sa cool Kuch b ni hota haha wo m n experience b kr lia idr..</p>
+      <p class="msg">really yr I can't forget rhm memories..tm logo n mil k hi Mra time whn bht special bnaya h MRI life ki book m bht khssss jga h..tmhra wo hisb ha jsy wo sher ha na</p>
+      <div class="urdu-line" lang="ur">ایک دوست ہو ابنِ مزاہر جیسا<br>بے مطلب جسے مقتل میں بلایا جائے</div>
+      <p class="msg">Tm b wohi dost ho jis k Bina hmri mehfil adhori ha🤌🏻💓hayy lmba ho gia letter bht asy to bht bty h but abi k lia isa yhn hi rokty bqi k m heart to heart tmhn sb transfer kr do gi smj jna😂Allah pk tmhn duniyaaaa Jahan ki hr Khushi sa nawazy yr..</p>
+      <p class="msg">hmesha hsti muskurati rhoooo or apny babiesss sth hmesha roads p awaragrdi krti ho😂means ghomti phirti rhti ho n to wohi krti rho..</p>
+      <p class="msg end">Happiesstttt brthdy again isma theeee cutestttt hotestttt &amp; sweetessttt girl😂❤️</p>
+    </div>
+  </div>
+</section>
+
+<section id="cake">
+  <h2>Ab wish maango!</h2>
+  <p class="sub">Aankhein band, dil mein dua, phir moombatti bujhao</p>
+  <div class="cake"><span class="flame" id="flame">🔥</span><br>🎂</div>
+  <button class="btn" id="blow">Moomatti bujhao 🌬️</button>
+  <div class="wish" id="wish" aria-live="polite"></div>
+</section>
+
+<footer>Happy new decade my girl 🧡</footer>
+
+<script>
+// ✏️ DESIGNER SETTINGS: yahan video (.mp4) ya photo (.jpg) dono filenames chalenge!
+var NAME = "Isma";
+var SLOTS = [
+  {src:"memory1.mp4"},
+  {src:"memory2.mp4"},
+  {src:"memory3.mp4"},
+  {src:"memory4.mp4"},
+  {src:"memory5.mp4"},
+  {src:"memory6.mp4"}
+];
+document.getElementById("name").textContent = NAME;
+
+// leaves
+(function(){
+  var box=document.getElementById("leaves"), E=["🍂","🍁","🍂","🍁","🌰","🍃"];
+  for(var i=0;i<16;i++){
+    var s=document.createElement("span"); s.className="leaf";
+    s.textContent=E[i%E.length];
+    s.style.left=(Math.random()*100)+"vw";
+    s.style.fontSize=(16+Math.random()*18)+"px";
+    s.style.animationDuration=(9+Math.random()*10)+"s";
+    s.style.animationDelay=(-Math.random()*16)+"s";
+    s.style.setProperty("--dx",(Math.random()*160-80)+"px");
+    s.style.setProperty("--rot",(Math.random()*720-360)+"deg");
+    box.appendChild(s);
+  }
+})();
+
+// video / photo slots
+var cur=0, isMuted=true, screen=document.getElementById("screen"), wall=document.getElementById("wall"), dots=document.getElementById("dots");
+
+function isVideo(src){
+  return /\.(mp4|webm|mov|ogg)$/i.test(src);
+}
+
+function inner(s){
+  if(!s.src) return '<div class="ph"><b>🎬</b>Clip missing</div>';
+  if(isVideo(s.src)){
+    return '<video id="mainVid" src="'+s.src+'" autoplay loop '+(isMuted?'muted':'')+' playsinline></video>'
+         + '<button type="button" class="mute-btn" id="muteBtn">'+(isMuted?'🔇 Sound':'🔊 On')+'</button>';
+  }
+  return '<img alt="Yaadgar photo" src="'+s.src+'">';
+}
+
+function draw(){
+  var s=SLOTS[cur];
+  screen.innerHTML=inner(s);
+  var mb=document.getElementById("muteBtn");
+  if(mb){
+    mb.onclick=function(e){
+      e.stopPropagation();
+      isMuted=!isMuted;
+      var v=document.getElementById("mainVid");
+      if(v) v.muted=isMuted;
+      mb.textContent=isMuted?'🔇 Sound':'🔊 On';
+    };
+  }
+  dots.innerHTML=SLOTS.map(function(_,i){return '<i class="'+(i===cur?"on":"")+'"></i>';}).join("");
+  var rots=["-4deg","3deg","-2deg","4deg","-3deg","2deg"];
+  wall.innerHTML="";
+  SLOTS.forEach(function(p,i){
+    var b=document.createElement("button"); b.className="pol"; b.style.setProperty("--r",rots[i%rots.length]);
+    b.setAttribute("aria-label","Memory "+(i+1)+" dekho");
+    var media = !p.src ? "🍁" : isVideo(p.src)
+      ? '<video src="'+p.src+'" muted loop autoplay playsinline></video><span class="badge">▶</span>'
+      : '<img alt="" src="'+p.src+'">';
+    b.innerHTML='<div class="im">'+media+'</div>';
+    b.onclick=function(){
+      cur=i;
+      draw();
+      document.querySelector(".console").scrollIntoView({behavior:"smooth",block:"center"});
+    };
+    wall.appendChild(b);
+  });
+}
+
+function go(n){cur=(n+SLOTS.length)%SLOTS.length;draw();}
+screen.onclick=function(){go(cur+1);};
+screen.onkeydown=function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();go(cur+1);}};
+document.querySelector(".l").onclick=function(){go(cur-1);};
+document.querySelector(".r").onclick=function(){go(cur+1);};
+document.querySelector(".u").onclick=function(){go(0);};
+document.querySelector(".d").onclick=function(){go(SLOTS.length-1);};
+document.getElementById("shuffle").onclick=function(){go(Math.floor(Math.random()*SLOTS.length));};
+
+function burst(n,list){
+  for(var i=0;i<n;i++){
+    var s=document.createElement("span"); s.textContent=list[i%list.length];
+    s.style.cssText="position:fixed;z-index:20;pointer-events:none;font-size:26px;left:"+(20+Math.random()*60)+"vw;top:60vh;transition:transform 1.6s ease-out,opacity 1.6s;opacity:1";
+    document.body.appendChild(s);
+    (function(el){requestAnimationFrame(function(){requestAnimationFrame(function(){
+      el.style.transform="translate("+(Math.random()*200-100)+"px,"+(-(120+Math.random()*260))+"px) rotate("+(Math.random()*360)+"deg)";
+      el.style.opacity="0";
+    });});setTimeout(function(){el.remove();},1800);})(s);
+  }
+}
+document.getElementById("heart").onclick=function(){burst(10,["🧡","🍁","✨"]);};
+
+// letter
+var env=document.getElementById("env"), lt=document.getElementById("lt");
+function toggle(){var o=lt.classList.toggle("open");env.setAttribute("aria-expanded",o);if(o)burst(8,["🍂","💛","🍁"]);}
+env.onclick=toggle;
+env.onkeydown=function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();toggle();}};
+
+// cake
+var lit=true;
+document.getElementById("blow").onclick=function(){
+  var f=document.getElementById("flame"), w=document.getElementById("wish"), b=this;
+  if(lit){f.classList.add("out");w.textContent="Aameen! Teri har dua qabool ho 🤲🏻🧡";b.textContent="Dobara jalao 🕯️";burst(18,["🍂","🍁","🎉","✨","🧡"]);}
+  else{f.classList.remove("out");w.textContent="";b.textContent="Moomatti bujhao 🌬️";}
+  lit=!lit;
+};
+draw();
+</script>
+</body>
+</html>
